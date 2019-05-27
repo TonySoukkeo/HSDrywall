@@ -10,13 +10,7 @@ const Navbar = () => {
     >
       <div className="container">
         <a href="#" className="navbar-brand">
-          <img
-            style={{
-              width: "30%"
-            }}
-            src="/assets/logo.png"
-            alt="logo"
-          />
+          <img className="navbar-logo" src="/assets/logo.png" alt="logo" />
         </a>
         <button
           type="button"

@@ -43,6 +43,10 @@ h1 {
   border-bottom: 3px solid #262626;
 }
 
+.navbar-logo {
+  width: 150px;
+}
+
 /* BANNER STYLING */
 #Banner {
   min-height: 100vh;
@@ -803,6 +807,9 @@ SERVICE CARD STYLING FOR MOBILE VIEW
 
 /* Medium devices - tablets 755px and up*/
 @media (min-width: 782px) {
+  .navbar-logo {
+    width: 30%;
+  }
   /* BANNER STYLING */
   .amp-margin {
     margin-top: -22px;
