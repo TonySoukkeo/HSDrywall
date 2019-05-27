@@ -10,7 +10,13 @@ const Navbar = () => {
     >
       <div className="container">
         <a href="#" className="navbar-brand">
-          Hunter Schmidt Drywall
+          <img
+            style={{
+              width: "30%"
+            }}
+            src="/assets/logo.png"
+            alt="logo"
+          />
         </a>
         <button
           type="button"
