@@ -3,44 +3,19 @@ import { Link } from "react-router-dom";
 
 const images = [
   {
-    image:
-      "https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    id: 1,
+    image: "/assets/gallery/photo_1.jpg",
     alt: "image 1"
   },
   {
-    image:
-      "https://images.pexels.com/photos/1216544/pexels-photo-1216544.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    id: 2,
+    image: "/assets/gallery/photo_2.jpg",
     alt: "image 2"
   },
   {
-    image:
-      "https://images.pexels.com/photos/1537008/pexels-photo-1537008.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    id: 3,
+    image: "/assets/gallery/photo_3.jpg",
     alt: "image 3"
-  },
-  {
-    image:
-      "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    alt: "image 4"
-  },
-  {
-    image:
-      "https://images.pexels.com/photos/544966/pexels-photo-544966.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    alt: "image 5"
-  },
-  {
-    image:
-      "https://images.pexels.com/photos/1145434/pexels-photo-1145434.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    alt: "image 6"
-  },
-  {
-    image:
-      "https://images.pexels.com/photos/544965/pexels-photo-544965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    alt: "image 7"
-  },
-  {
-    image:
-      "https://images.pexels.com/photos/830891/pexels-photo-830891.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    alt: "image 8"
   }
 ];
 
@@ -72,13 +47,8 @@ class PhotoContent extends Component {
       display = (
         <div>
           <img
-            className={fade ? "image-display" : ""}
+            className={fade ? "image-display display-size" : "display-size"}
             src={imgDisplay}
-            style={{
-              boxShadow: "-1px 1px 4px #000000",
-              height: "100%",
-              width: "100%"
-            }}
             alt=""
           />
         </div>
@@ -143,7 +113,7 @@ class PhotoContent extends Component {
               <div id="photo-list" className="d-none d-lg-block col-lg-4">
                 <div className="row text-center m-auto">
                   {images.map(image => (
-                    <div className="col-lg-6 pt-4 photo-list">
+                    <div key={image.id} className="col-lg-6 pt-4 photo-list">
                       <img
                         className="photo-contact-image-hover"
                         onClick={() => this.onClickPhoto(image.image)}
@@ -158,7 +128,10 @@ class PhotoContent extends Component {
               <div id="photo-list" className="d-block d-lg-none">
                 <div className="row text-center m-auto">
                   {images.map(image => (
-                    <div className="col-lg-6 photo-list photo-list-mobile pt-4">
+                    <div
+                      key={image.id}
+                      className="col-lg-6 photo-list photo-list-mobile pt-4"
+                    >
                       <img
                         style={{ height: "100%", width: "100%" }}
                         className="photo-contact-image-hover"

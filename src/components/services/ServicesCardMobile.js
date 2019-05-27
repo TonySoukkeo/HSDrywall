@@ -2,16 +2,19 @@ import React from "react";
 
 const services = [
   {
+    id: 1,
     name: "service1",
     description: "short description",
     activeText: "Active text 1"
   },
   {
+    id: 2,
     name: "service2",
     description: "short description",
     activeText: "Active text2"
   },
   {
+    id: 3,
     name: "service3",
     description: "short description",
     activeText: "Active text3"
@@ -30,7 +33,7 @@ const ServicesCardMobile = ({
       <div className="container">
         <div className="row">
           {services.map(x => (
-            <div className="col-md-4">
+            <div key={x.id} className="col-md-4">
               <div
                 style={{
                   background: "#EFEFEF",

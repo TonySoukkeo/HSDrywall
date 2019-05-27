@@ -2,18 +2,21 @@ import React from "react";
 
 const services = [
   {
+    id: 1,
     name: "service1",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nemo voluptas quis quos enim. Non adipisci nulla deserunt dolorum cum.",
     activeText: "Active Text1"
   },
   {
+    id: 2,
     name: "service2",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nemo voluptas quis quos enim. Non adipisci nulla deserunt dolorum cum.",
     activeText: "Active Text2"
   },
   {
+    id: 3,
     name: "service3",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nemo voluptas quis quos enim. Non adipisci nulla deserunt dolorum cum.",
@@ -32,7 +35,7 @@ const ServicesCardDesktop = ({
       <div className="container">
         <div className="row">
           {services.map(x => (
-            <div className="col-md-4">
+            <div key={x.id} className="col-md-4">
               <div
                 className={
                   service1 && x.name === "service1"
