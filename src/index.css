@@ -43,6 +43,17 @@ h1 {
   border-bottom: 3px solid #262626;
 }
 
+#nav a {
+  transition: 0.2s ease-in;
+}
+
+#nav a:hover,
+.selected {
+  color: #c73688 !important;
+  border-bottom: 1px solid #c73688;
+  padding-bottom: 3px;
+}
+
 .navbar-logo {
   width: 150px;
 }
@@ -189,9 +200,18 @@ h1 {
 
 /* 
 
+
+
 SERVICE CARD STYLING FOR MOBILE VIEW
 
 */
+
+.contact-btn {
+  color: white;
+  background: #3c1ca4 !important;
+  margin-top: 10px;
+  font-size: 2rem !important;
+}
 
 .service-arrow-mobile {
   margin-top: -5px;
@@ -220,7 +240,6 @@ SERVICE CARD STYLING FOR MOBILE VIEW
 }
 
 .card-mobile {
-  height: 458px;
   position: relative;
   margin-bottom: 35px;
 }
@@ -229,7 +248,7 @@ SERVICE CARD STYLING FOR MOBILE VIEW
   margin-top: 15px;
   margin-left: 120px;
   color: #ededed;
-  font-size: 2.9rem;
+  font-size: 1rem !important;
 }
 
 .service-active-mobile {
@@ -263,7 +282,7 @@ SERVICE CARD STYLING FOR MOBILE VIEW
 
 .active-link-mobile {
   color: yellow !important;
-  font-size: 3rem;
+  font-size: 1.5rem !important;
 }
 
 .service-button-mobile {
@@ -371,6 +390,7 @@ SERVICE CARD STYLING FOR MOBILE VIEW
   border: none;
   color: #edeeef;
   padding: 10px 20px;
+  margin-bottom: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -585,7 +605,6 @@ SERVICE CARD STYLING FOR MOBILE VIEW
     SERVICE PAGE STYLING
   */
   .link-mobile {
-    font-size: 1.5rem;
     margin-top: 30px;
     margin-bottom: 10px;
   }
@@ -808,7 +827,7 @@ SERVICE CARD STYLING FOR MOBILE VIEW
 /* Medium devices - tablets 755px and up*/
 @media (min-width: 782px) {
   .navbar-logo {
-    width: 30%;
+    width: 260px;
   }
   /* BANNER STYLING */
   .amp-margin {

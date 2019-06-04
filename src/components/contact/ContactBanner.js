@@ -53,7 +53,8 @@ class ContactBanner extends Component {
             </span>
             <br />
             <span style={{ color: "red" }}>
-              * This is an estimate, and not the final price.
+              * This is just an estimate, and not the final price. Please call
+              or text for any further details on any pricing.
             </span>
           </div>
         </div>
@@ -126,7 +127,7 @@ class ContactBanner extends Component {
                   value={sqrFt}
                   onChange={this.onChange}
                   className="form-control form-control-lg  m-auto form-rounded"
-                  placeholder="Sqrt ft"
+                  placeholder="Sqr Ft"
                   type="number"
                 />
                 <div className="input-group-prepend form-rounded">
@@ -135,7 +136,11 @@ class ContactBanner extends Component {
                   </button>
                 </div>
               </div>
-              {error !== null && <div>error erros</div>}
+              {error !== null && (
+                <div className="text-danger">
+                  Please double check your input.
+                </div>
+              )}
             </form>
           </div>
           {estimateShowDisplay && result}

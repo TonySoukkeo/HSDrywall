@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -46,9 +46,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="d-none d-md-block nav-item">
-              <Link to="/services" className="nav-link">
+              <NavLink
+                to="/services"
+                activeClassName="selected"
+                className="nav-link"
+              >
                 Services
-              </Link>
+              </NavLink>
             </li>
             <li
               data-toggle="collapse"
@@ -60,9 +64,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="d-none d-md-block nav-item">
-              <Link to="/photos" className="nav-link">
+              <NavLink
+                to="/photos"
+                activeClassName="selected"
+                className="nav-link"
+              >
                 Photos
-              </Link>
+              </NavLink>
             </li>
             <li
               data-toggle="collapse"
@@ -74,9 +82,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="d-none d-md-block nav-item">
-              <Link to="/contact" className="nav-link">
+              <NavLink
+                to="/contact"
+                activeClassName="selected"
+                className="nav-link"
+              >
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

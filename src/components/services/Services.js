@@ -10,9 +10,8 @@ class Services extends Component {
   state = {
     serviceHeader: "Services",
     serviceText:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, saepe?",
+      "I offer services for both newly built homes and remodeling. Click on each of the services to find out more!",
     service1: false,
-    service2: false,
     service2: false
   };
 
@@ -22,8 +21,7 @@ class Services extends Component {
       serviceHeader: header,
       serviceText: text,
       service1: service.service1,
-      service2: service.service2,
-      service3: service.service3
+      service2: service.service2
     });
     // Scroll to top of page
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -33,19 +31,12 @@ class Services extends Component {
     // Update state
     this.setState({
       service1: service.service1,
-      service2: service.service2,
-      service3: service.service3
+      service2: service.service2
     });
   };
 
   render() {
-    const {
-      serviceHeader,
-      serviceText,
-      service1,
-      service2,
-      service3
-    } = this.state;
+    const { serviceHeader, serviceText, service1, service2 } = this.state;
     return (
       <div>
         <div className="d-none d-lg-block">
@@ -67,7 +58,6 @@ class Services extends Component {
             OnClickServiceChangeMobile={this.OnClickServiceChangeMobile}
             service1={service1}
             service2={service2}
-            service3={service3}
           />
         </div>
 
@@ -76,7 +66,6 @@ class Services extends Component {
             OnClickServiceChange={this.OnClickServiceChange}
             service1={service1}
             service2={service2}
-            service3={service3}
           />
         </div>
 
